@@ -66,7 +66,7 @@ app.delete('/api/notes/:id', (req, res) => {
 
 // Default route
 app.get('*', (req, res) => {
-    let indexPath = path.join(__dirname, 'index.html');
+    let indexPath = path.join(__dirname, 'public', 'index.html');
     let reqPath = path.join(__dirname, "public", req.path);
     if (fs.existsSync(reqPath)) {
         res.sendFile(reqPath);
